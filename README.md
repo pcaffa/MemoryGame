@@ -4,6 +4,11 @@
 
 ![Game](img/gif-memorygame.gif)
 
+<p align="center">
+  <a href="https://memorygamepv.netlify.app/" target="_blank">Demo on Netlify
+  </a>
+</p>
+
 <p>&nbsp;&nbsp;</p>
 
 <p align="center">
