@@ -1,0 +1,104 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="memory-game">
+        <div class="memory-card" data-framework="passaway">
+            <!--<img class="front-face" src="img/passaway-definition.png" alt="Face of the letter">-->
+            <h1 class="front-face">Pass away</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passaway">
+            <h2 class="front-face">To stop living, to die</h2>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passout">
+            <h1 class="front-face">Pass out</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passout">
+            <h1 class="front-face">To become unconscious for a short time</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passoff">
+            <h1 class="front-face">Pass off</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passoff">
+            <h1 class="front-face">To happen</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passby">
+            <h1 class="front-face">Pass by</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passby">
+            <h1 class="front-face">To go or to move</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passon">
+            <h1 class="front-face">Pass on</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passon">
+            <h1 class="front-face">To reject or to refuse</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passaround">
+            <h1 class="front-face">Pass around</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>
+
+        <div class="memory-card" data-framework="passaround">
+        <h1 class="front-face">To give something to someone, who will then give it to others</h1>
+            <img class="back-face" src="img/undraw_Questions.svg" alt="Face of the letter">
+        </div>        
+    </section>
+
+    <div  class="info-game">
+        <h1>Memory Game about Phrasal Verbs</h1>
+        <h5>Search definition about each phrasal verb</h5>
+
+        <ul>
+            <li data-framework="passby">Pass by
+                <p>To go or to move</p>
+            </li>            
+            <li  data-framework="passon">Pass on
+                <p>To reject or to refuse</p>
+            </li>
+            <li data-framework="passoff">Pass off
+                <p>To happen</p>
+            </li>
+            <li data-framework="passout">Pass out
+                <p>To become unconscious for a short time</p>
+            </li>
+            <li data-framework="passaway">Pass way
+                <p>To stop living, to die</p>
+            </li>
+            <li data-framework="passaround">Pass around
+                <p>To give something to someone, who will then give it to others</p>
+            </li>
+        </ul>
+
+        <button type="button" onClick="restart()" hidden="true">Restart</button>
+    </div>
+    
+    <script src="script.js"></script>    
+</body>
+</html>
