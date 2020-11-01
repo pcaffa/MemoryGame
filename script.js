@@ -15,7 +15,7 @@ function flipCard(){
 
    this.classList.add('flip')
    
-   //verifica se não tem nenhuma carta virada e entra no if e para no return
+   //verifica se não tem nenhuma carta virada
    if(!hasFlippedCard){
        hasFlippedCard = true;
        firstCard = this;
@@ -24,7 +24,6 @@ function flipCard(){
 
    //se não parou no if, ou seja, já tem uma carta virada então aqui será a segunda carta
    secondCard = this;
-   //hasFlippedCard=false
 
    //chama a função que verifica se as 2 cartas são iguais
    checkForMath();
@@ -33,18 +32,12 @@ function flipCard(){
 }
 
 function checkForMath() {
-    //MANEIRA 1
-    //se as 2 cartas viradas forem iguais, chama a função para desabilita-las
     if(firstCard.dataset.framework === secondCard.dataset.framework){
         disableCards();
         return;
     }
     //se as 2 cartas viradas nao forem iguais, chama a função para remover a class flip
     unflipCards();
-
-    //MANEIRA 2 - usando if ternario e resumindo o codigo acima
-    //let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    //isMatch ? disableCards() : unflipCards();
 }
 
 function disableCards() {
@@ -57,13 +50,11 @@ function disableCards() {
 }
 
 function unflipCards() {
-    lockBoard = true; //bloqueia
+    lockBoard = true;
     //será executado apos 1segundo e meio removendo a class flip(ou seja, as cartas virarão para a posição inicial)
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-
-        //desbloqueia lockBoard=false;
 
         resetBoard();
     },1500);
@@ -83,21 +74,10 @@ function shuffle(){
   
 }
 
-
 //Immediately Invoked Function Expression (IIFE)
-(function IIFE(){
-    shuffle();
-})();
+(()=>{ shuffle() })();
 
-
-//Maneira 1 - forEach executa a função para cada item do array cards
 cards.forEach(card => card.addEventListener('click',flipCard));
-
-//Maneira 2 - para cada card de cards adicione o evento click e executa a função flip
-//for(card of cards) {
-//    card.addEventListener('click',flipCard)
-//}
-
 
 function lineThroughInfo(){
 
@@ -108,10 +88,6 @@ function lineThroughInfo(){
         }
     }
 }
-
-/*credit
-https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/
-*/
 
 function restart(){
     lockBoard = true;
@@ -128,6 +104,5 @@ function restart(){
     setTimeout(() => {
         resetBoard();
         shuffle();
-    },800);
-    
+    },800);   
 }
