@@ -14,8 +14,8 @@ body {
 }
 
 .memory-game {
-    width: 640px;
-    height: 700px;
+    width: 40vw;
+    height: 90vh;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -23,9 +23,9 @@ body {
 }
 
 .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 5px;
+    width: calc(25% - 1vw);
+    height: calc(33.333% - 1vh);
+    margin: .4rem;
     position: relative;
     transform-style: preserve-3d;
     transition: transform .5s;
@@ -35,10 +35,10 @@ body {
 .front-face, .back-face {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 0.9rem;
     position: absolute;
-    border-radius: 5px;   
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    border-radius: .5rem;   
+    box-shadow: .1rem .1rem .1rem rgba(0,0,0,.3);
     transform: scale(1);
     backface-visibility: hidden;
 }
@@ -72,10 +72,10 @@ body {
 }
 
 .info-game {
-    width: 440px;
-    height: 700px;
+    width: 30vw;
+    height: 90vh;
     margin: auto;
-    border-radius: 5px;
+    border-radius: .5rem;
     background-color: rgb(70, 2, 133);
     text-align: center;
 }
@@ -86,8 +86,7 @@ body {
 }
 
 .info-game ul{    
-    margin-top: 5vh;
-    margin-left: 3vh;
+    margin: 2rem 0.3rem 1rem 1.5rem;
 
     text-align: initial;  
     font-weight: bold;    
@@ -97,7 +96,7 @@ body {
     color:rgb(167, 121, 211);
     opacity: 0; 
 
-    margin-bottom: 3vh;
+    margin-bottom: 1rem;
 }
 
 .info-game ul .phrasalverb {
@@ -109,15 +108,15 @@ body {
 }
 
 .info-game button {
-    width: 300px;
-    height: 35px;
+    width: 25vw;
+    height: 5vh;
     background-color: rgb(248, 141, 0);
 
     color:rgb(70, 2, 133);
     font: 18px 'Nunito', sans-serif;
     font-weight: bold;
 
-    border-radius: 5px;
+    border-radius: .5rem;
     cursor: pointer;    
     outline: none;
 
@@ -126,4 +125,59 @@ body {
 
 .info-game button:hover{
     background-color: rgb(255, 229, 82);
+}
+
+
+/*PHONE VERSION*/
+@media (max-width: 800px) {
+    body {
+        display: flex;
+        align-items:center;
+        flex-direction: column-reverse;
+    }
+
+    .memory-game {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .memory-card {
+        width: calc(23% - 0.8vw);
+        height: calc(31% - 1vh);
+        margin: .2rem;    
+    }
+
+    .front-face{
+        font-size: 8px;
+    }
+
+    .info-game {
+        width: 80vw;
+        height: 45vh;
+        
+    }
+
+    .info-game h1{
+        font-size: 15px;
+    }
+
+    .info-game h5,.info-game ul{
+        font-size: 11px;
+    }
+
+    .info-game ul{    
+        margin: 1rem 0.1rem 0.2rem 1rem;   
+    }
+
+    .list-verb {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-game button {
+        width: 70vw;
+        height: 4vh;
+
+        font-size: 13px;
+    }
 }

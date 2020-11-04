@@ -1,7 +1,10 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <!--tag para tela ser responsiva-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
+    
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -73,28 +76,30 @@
 
     <div  class="info-game">
         <h1>Memory Game about Phrasal Verbs</h1>
-        <h5>Search definition about each phrasal verb</h5>
-
+        <h5>Search definition about each phrasal verb</h5>        
         <ul>
-            <li data-framework="passby">Pass by
-                <p>To go or to move</p>
-            </li>            
-            <li  data-framework="passon">Pass on
-                <p>To reject or to refuse</p>
-            </li>
-            <li data-framework="passoff">Pass off
-                <p>To happen</p>
-            </li>
-            <li data-framework="passout">Pass out
-                <p>To become unconscious for a short time</p>
-            </li>
-            <li data-framework="passaway">Pass way
-                <p>To stop living, to die</p>
-            </li>
-            <li data-framework="passaround">Pass around
-                <p>To give something to someone, who will then give it to others</p>
-            </li>
-        </ul>
+            <div class="list-verb">
+                <li data-framework="passby">Pass by
+                    <p>To go or to move</p>
+                </li>            
+                <li  data-framework="passon">Pass on
+                    <p>To reject or to refuse</p>
+                </li>
+                <li data-framework="passoff">Pass off
+                    <p>To happen</p>
+                </li>
+                <li data-framework="passout">Pass out
+                    <p>To become unconscious for a short time</p>
+                </li>
+                <li data-framework="passaway">Pass way
+                    <p>To stop living, to die</p>
+                </li>
+                <li data-framework="passaround">Pass around
+                    <p>To give something to someone, who will then give it to others</p>
+                </li>           
+            </div>
+         </ul>
+        
 
         <button type="button" onClick="restart()" hidden="true">Restart</button>
     </div>
